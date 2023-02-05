@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
 html,
@@ -138,9 +139,6 @@ table {
       -ms-flex-align: center;
           align-items: center;
   z-index: 11;
-}
-
-.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,6 +148,50 @@ table {
   display: -ms-flexbox;
   display: flex;
   gap: 93px;
+  margin-left: 114px;
+}
+.nav__social {
+  margin-left: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav__social div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      grid-template: 20px;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+.nav__social div:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.nav__social div svg {
+  fill: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__items::before {
+  content: " ";
+  background-color: black;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  border-color: 1зч solid white;
 }
 
 .project {

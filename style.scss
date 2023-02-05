@@ -19,13 +19,49 @@
   opacity: 0.9;
   align-items: center;
   z-index: 11;
-}
-.nav {
   display: flex;
+
   &__menu {
     display: flex;
     gap: 93px;
+    margin-left: 114px;
   }
+
+  &__social {
+    margin-left: 125px;
+    display: flex;
+
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-template: 20px;
+      margin-left: 20px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid white;
+      border-radius: 100%;
+    }
+
+    & div:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    & div svg {
+      fill: white;
+      align-items: center;
+    }
+  }
+}
+
+.menu__items::before {
+  content: " ";
+  background-color: black;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  border-color: 1зч solid white;
 }
 
 .project {
