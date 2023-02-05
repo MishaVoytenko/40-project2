@@ -1,6 +1,34 @@
 @import "reset.scss";
 
 .header {
+  position: relative;
   height: 800px;
   background-image: url(img/Mask.png), url(img/Background.png);
+}
+
+.nav {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0 10%;
+  height: 110px;
+  background: url(img/Mask.png),
+    url(img/Background.png) center top/100% 50rem no-repeat;
+  opacity: 0.9;
+  align-items: center;
+  z-index: 11;
+}
+.nav {
+  display: flex;
+  &__menu {
+    display: flex;
+    gap: 93px;
+  }
+}
+
+.project {
+  height: 1450px;
+  background-color: black;
 }
