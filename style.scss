@@ -132,8 +132,15 @@
 
 .header-slider {
   text-align: center;
-  & li {
+  & li h2 {
     @include montserrat;
+    text-transform: uppercase;
+  }
+
+  & li p {
+    @include montserrat;
+    font-weight: 400;
+    font-size: 18px;
   }
 }
 

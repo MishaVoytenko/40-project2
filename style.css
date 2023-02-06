@@ -213,13 +213,24 @@ table {
 .header-slider {
   text-align: center;
 }
-.header-slider li {
+.header-slider li h2 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 80px;
   line-height: 98px;
   color: #ffffff;
+  text-transform: uppercase;
+}
+.header-slider li p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 98px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .slick-dots {
