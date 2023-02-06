@@ -9,9 +9,19 @@
   color: #ffffff;
 }
 
+@mixin source {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
 .header {
   position: relative;
   padding-top: 330px;
+  padding-right: 50px;
   height: 800px;
   background-image: url(img/Mask.png), url(img/Background.png);
 }
@@ -35,6 +45,23 @@
     display: flex;
     gap: 93px;
     margin-left: 114px;
+
+    // &__item {
+    //   position: relative;
+    // }
+
+    // &__item::before {
+    //   content: " ";
+    //   display: block;
+    //   border-radius: 100%;
+    //   width: 9px;
+    //   height: 9px;
+    //   border: 1px solid white;
+    // }
+
+    // &__item:hover::before {
+    //   background: white;
+    // }
   }
 
   &__social {
@@ -63,11 +90,36 @@
       align-items: center;
     }
   }
+
+  &__btn {
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin-top: 240px;
+    margin: 0 auto;
+    display: block;
+    background-image: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+.nav__item {
+  position: relative;
+  @include source;
+  & a {
+    text-decoration: none;
+    color: #ffffff;
+  }
 }
 
 .nav__item::before {
   content: " ";
   display: block;
+  position: absolute;
+  left: -14px;
+  bottom: 3px;
   border-radius: 100%;
   width: 9px;
   height: 9px;
@@ -82,16 +134,14 @@
   text-align: center;
   & li {
     @include montserrat;
-    font-weight: 300;
   }
 }
 
 .slick-dots {
   position: absolute;
-  left: 756px;
+  left: 720px;
   rotate: 90deg;
   top: 0;
-  margin-bottom: 40px;
 }
 
 .project {
