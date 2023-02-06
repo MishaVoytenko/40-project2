@@ -1,7 +1,17 @@
 @import "reset.scss";
 
+@mixin montserrat {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 98px;
+  color: #ffffff;
+}
+
 .header {
   position: relative;
+  padding-top: 330px;
   height: 800px;
   background-image: url(img/Mask.png), url(img/Background.png);
 }
@@ -18,7 +28,7 @@
     url(img/Background.png) center top/100% 50rem no-repeat;
   opacity: 0.9;
   align-items: center;
-  z-index: 11;
+  z-index: 10;
   display: flex;
 
   &__menu {
@@ -55,13 +65,33 @@
   }
 }
 
-.menu__items::before {
+.nav__item::before {
   content: " ";
-  background-color: black;
+  display: block;
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
-  border-color: 1зч solid white;
+  width: 9px;
+  height: 9px;
+  border: 1px solid white;
+}
+
+.nav__item:hover::before {
+  background: white;
+}
+
+.header-slider {
+  text-align: center;
+  & li {
+    @include montserrat;
+    font-weight: 300;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  left: 756px;
+  rotate: 90deg;
+  top: 0;
+  margin-bottom: 40px;
 }
 
 .project {
