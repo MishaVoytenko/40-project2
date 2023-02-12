@@ -114,7 +114,8 @@ table {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header {
@@ -123,6 +124,7 @@ table {
   padding-right: 50px;
   height: 800px;
   background-image: url(img/Mask.png), url(img/Background.png);
+  background-size: cover;
 }
 
 .nav {
@@ -135,51 +137,22 @@ table {
   height: 110px;
   background: url(img/Mask.png), url(img/Background.png) center top/100% 50rem no-repeat;
   opacity: 0.9;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  background-size: cover;
 }
 .nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 93px;
   margin-left: 114px;
 }
-.nav__social {
-  margin-left: 125px;
-  display: flex;
-}
-.nav__social div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-template: 20px;
-  margin-left: 20px;
-  width: 40px;
-  height: 40px;
-  border: 1px solid white;
-  border-radius: 100%;
-}
-.nav__social div:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-.nav__social div svg {
-  fill: white;
-  align-items: center;
-}
-.nav__btn {
-  height: 40px;
-  width: 40px;
-  border: 1px solid white;
-  border-radius: 100%;
-  margin-top: 240px;
-  margin: 0 auto;
-  display: block;
-  background-image: none;
-  background: transparent;
-  cursor: pointer;
-}
-
 .nav__item {
   position: relative;
   font-family: "Source Sans Pro";
@@ -193,7 +166,6 @@ table {
   text-decoration: none;
   color: #ffffff;
 }
-
 .nav__item::before {
   content: " ";
   display: block;
@@ -205,9 +177,53 @@ table {
   height: 9px;
   border: 1px solid white;
 }
-
 .nav__item:hover::before {
   background: white;
+}
+.nav__social {
+  margin-left: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav__social div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      grid-template: 20px;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+.nav__social div:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.nav__social div svg {
+  fill: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav__btn {
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin: 180px auto 0px;
+  display: block;
+  background-image: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .header-slider {
@@ -235,12 +251,89 @@ table {
 
 .slick-dots {
   position: absolute;
-  left: 720px;
+  left: 670px;
   rotate: 90deg;
   top: 0;
 }
 
 .project {
   height: 1450px;
-  background-color: black;
-}/*# sourceMappingURL=style.css.map */
+}
+.project__text {
+  margin-top: 130px;
+  margin-bottom: 90px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 98px;
+  color: #ffffff;
+  color: #2c4058;
+}
+
+.project__imeges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+}
+
+.second-imege {
+  position: relative;
+  left: -370px;
+  top: 57px;
+}
+
+.text-imege {
+  width: 470px;
+  height: 350px;
+  margin-left: -300px;
+}
+
+.text-imege p:first-child {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 98px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 22px;
+  color: #2c4058;
+}
+
+.text-imege h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 98px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  color: #2c4058;
+}
+
+.text-imege p:nth-child(3) {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #2c4058;
+}
+
+.text-imege button:nth-child(4) {
+  width: 190px;
+  height: 50px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border: 1px solid #2c4058;
+}
